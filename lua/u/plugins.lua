@@ -65,9 +65,9 @@ return packer.startup(function(use)
 
   -- install lsp config
   use "neovim/nvim-lspconfig" -- Collection of configurations for the built-in LSP client
-  use "tomlion/vim-solidity"  -- solidity syntax highlighting
   use "williamboman/nvim-lsp-installer"
 
+  use "tomlion/vim-solidity"  -- solidity syntax highlighting
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

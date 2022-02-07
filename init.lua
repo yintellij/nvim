@@ -12,7 +12,3 @@ require "u.cmp"
 
 -- load lsp
 require "u.lsp"
-
--- load solidity language server
-require"lspconfig".solidity_ls.setup{}
-
