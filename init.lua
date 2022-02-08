@@ -12,3 +12,10 @@ require "u.cmp"
 
 -- load lsp
 require "u.lsp"
+
+-- load telescope
+require "u.telescope"
+
+require "u.treesitter"
+require "u.autopairs"
+require "u.comment"

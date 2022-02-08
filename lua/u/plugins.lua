@@ -44,6 +44,10 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "numToStr/Comment.nvim" 
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
 
   -- install gruvbox theme
   use "ellisonleao/gruvbox.nvim"
@@ -54,6 +58,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippet
   use "saadparwaiz1/cmp_luasnip"
@@ -70,6 +75,19 @@ return packer.startup(function(use)
   use "tomlion/vim-solidity"  -- solidity syntax highlighting
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+
+   -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+  use "nvim-treesitter/playground" 
+  use "nvim-telescope/telescope-media-files.nvim"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
