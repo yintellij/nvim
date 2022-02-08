@@ -54,6 +54,8 @@ return packer.startup(function(use)
   -- nvim-tree
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
 
   -- install gruvbox theme
   use "ellisonleao/gruvbox.nvim"
@@ -77,6 +79,7 @@ return packer.startup(function(use)
   -- install lsp config
   use "neovim/nvim-lspconfig" -- Collection of configurations for the built-in LSP client
   use "williamboman/nvim-lsp-installer"
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   use "tomlion/vim-solidity"  -- solidity syntax highlighting
   -- Automatically set up your configuration after cloning packer.nvim
