@@ -68,4 +68,5 @@ keymap("n", "<leader>p", "<cmd>lua require'telescope.builtin'.find_files(require
 keymap("n", "<leader>P", [[<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, no_ignore = true, hidden = true }))<cr>]], opts)
 
 
-keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>F", [[<cmd>lua require'telescope.builtin'.live_grep({additional_args = function() return {"--no-ignore", "--hidden"};  end } )<cr>]], opts)
