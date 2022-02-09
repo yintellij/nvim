@@ -16,4 +16,4 @@ My nvim configuration
 2. <space> + P -> find files under cwd
 3. <space> + f -> live grep excludes .* and .gitignore
 4. <space> + F -> live grep excludes .* and .gitignore
-
+5. <space> + = -> format current buffer
