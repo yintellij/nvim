@@ -104,6 +104,8 @@ return packer.startup(function(use)
 
   -- git sign
   use "lewis6991/gitsigns.nvim"
+  -- autosave
+  use "Pocco81/AutoSave.nvim"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
