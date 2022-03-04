@@ -66,12 +66,13 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>p", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>P", [[<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, no_ignore = true, hidden = true }))<cr>]], opts)
+keymap("n", "gr", [[<cmd>lua require'telescope.builtin'.lsp_references({ path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
 
 
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>F", [[<cmd>lua require'telescope.builtin'.live_grep({additional_args = function() return {"--no-ignore", "--hidden"};  end } )<cr>]], opts)
 keymap("n", "<leader>=", "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", opts)
-keymap("n", "gd", "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", opts)
+-- keymap("n", "gd", "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", opts)
 -- keymap("n", "gr", "<cmd>lua require('goto-preview').goto_preview_references()<cr>", opts)
 -- keymap("n", "<leader>m", "<cmd>MarksListGlobal<cr>", opts)
 

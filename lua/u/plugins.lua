@@ -109,7 +109,7 @@ return packer.startup(function(use)
 
   -- manage markers
   -- use 'chentau/marks.nvim'
-  use 'rmagatti/goto-preview'
+  -- use 'rmagatti/goto-preview'
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
