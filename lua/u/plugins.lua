@@ -107,6 +107,8 @@ return packer.startup(function(use)
   -- autosave
   use "Pocco81/AutoSave.nvim"
 
+  -- markers
+  use 'chentau/marks.nvim'
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
