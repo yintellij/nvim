@@ -16,12 +16,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
+-- vim.cmd [[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -91,7 +91,7 @@ return packer.startup(function(use)
   -- Put this at the end after all plugins
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  use { "nvim-telescope/telescope.nvim" , requires = {{ 'nvim-lua/plenary.vim' }} }
 
    -- Treesitter
   use {
@@ -107,8 +107,9 @@ return packer.startup(function(use)
   -- autosave
   use "Pocco81/AutoSave.nvim"
 
-  -- markers
-  use 'chentau/marks.nvim'
+  -- manage markers
+  -- use 'chentau/marks.nvim'
+  use 'rmagatti/goto-preview'
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
