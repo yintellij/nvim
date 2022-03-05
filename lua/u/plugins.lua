@@ -91,7 +91,7 @@ return packer.startup(function(use)
   -- Put this at the end after all plugins
 
   -- Telescope
-  use { "nvim-telescope/telescope.nvim" , requires = {{ 'nvim-lua/plenary.vim' }} }
+  use { "nvim-telescope/telescope.nvim" , requires = {{ 'nvim-lua/plenary.nvim' }} }
 
    -- Treesitter
   use {
