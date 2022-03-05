@@ -71,7 +71,7 @@ keymap("n", "<leader>P", [[<cmd>lua require'telescope.builtin'.find_files(requir
 keymap("n", "gr", [[<cmd>lua require'telescope.builtin'.lsp_references({includeDeclaration = false, path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
 
 -- go to definition
-keymap("n", "gd", [[<cmd>lua require'telescope.builtin'.lsp_definitions()<cr>]], opts)
+keymap("n", "gd", [[<cmd>lua require'telescope.builtin'.lsp_definitions({ path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
 
 -- code actions
 keymap("n", "ga", [[<cmd>lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes').get_cursor())<cr>]], opts)

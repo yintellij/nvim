@@ -66,6 +66,10 @@ cmp.setup {
     -- Set `select` to `false` to only confirm explicitly selected items.
     ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() and cmp.get_selected_entry() ~= nil then
+        cmp.confirm()
+        return
+      end
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expandable() then
