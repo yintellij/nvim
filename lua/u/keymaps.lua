@@ -86,5 +86,5 @@ keymap("n", "gL", [[<cmd>lua require'telescope.builtin'.diagnostics({ bufnr = 0,
 keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep({ layout_config = { width = 0.99}})<cr>", opts)
 keymap("n", "<leader>F", [[<cmd>lua require'telescope.builtin'.live_grep({layout_config = {width = 0.99}, additional_args = function() return {"--no-ignore", "--hidden"};  end} )<cr>]], opts)
 keymap("n", "<leader>=", "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", opts)
--- keymap("n", "<leader>m", "<cmd>MarksListGlobal<cr>", opts)
+keymap("n", "gm", [[<cmd>lua require'telescope.builtin'.marks({path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
 
