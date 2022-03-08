@@ -72,6 +72,7 @@ keymap("n", "gr", [[<cmd>lua require'telescope.builtin'.lsp_references({includeD
 
 -- go to definition
 keymap("n", "gd", [[<cmd>lua require'telescope.builtin'.lsp_definitions({ path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gt", [[<cmd>lua require'telescope.builtin'.lsp_type_definitions()<cr>]], opts)
 
 -- code actions
 keymap("n", "ga", [[<cmd>lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes').get_cursor())<cr>]], opts)
