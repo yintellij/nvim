@@ -27,3 +27,5 @@ My nvim configuration
 13. `gm` -> list marks by telescope
 14. `gh` -> hover
 15. `<Ctrl> + <Space>` for code completion
+16. gB  -> list git branches
+17. gC  -> list current buffer commits

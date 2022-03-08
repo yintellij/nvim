@@ -69,6 +69,8 @@ keymap("n", "<leader>P", [[<cmd>lua require'telescope.builtin'.find_files(requir
 
 -- references
 keymap("n", "gr", [[<cmd>lua require'telescope.builtin'.lsp_references({includeDeclaration = false, path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gB", [[<cmd>lua require'telescope.builtin'.git_branches({layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gC", [[<cmd>lua require'telescope.builtin'.git_bcommits({layout_config = {width = 0.99}})<cr>]], opts)
 
 -- go to definition
 keymap("n", "gd", [[<cmd>lua require'telescope.builtin'.lsp_definitions({ path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
