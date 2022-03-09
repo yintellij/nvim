@@ -29,3 +29,5 @@ My nvim configuration
 15. `<Ctrl> + <Space>` for code completion
 16. gB  -> list git branches
 17. gC  -> list current buffer commits
+18. gt  -> go to type definition
+
