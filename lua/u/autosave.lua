@@ -18,19 +18,19 @@ autosave.setup(
         write_all_buffers = false,
         on_off_commands = true,
         clean_command_line_interval = 0,
-        debounce_delay = 3000
+        debounce_delay = 200
     }
 )
 
 
 -- format golang source files
 autosave.hook_before_saving = function () 
-    local f = vim.fn.expand('%')
+    -- local f = vim.fn.expand('%')
     -- only format golang source files
-    local m = f:match('.go$')
-    if m ~= nil then
-        vim.lsp.buf.formatting_sync()
-    end
+    -- local m = f:match('.go$')
+    -- if m ~= nil then
+        -- vim.lsp.buf.formatting_sync()
+    -- end
 end
 
 
