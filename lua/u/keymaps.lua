@@ -92,6 +92,11 @@ keymap("n", "gL", [[<cmd>lua require'telescope.builtin'.diagnostics({ bufnr = 0,
 keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep({ layout_config = { width = 0.99}})<cr>", opts)
 keymap("n", "<leader>F", [[<cmd>lua require'telescope.builtin'.live_grep({layout_config = {width = 0.99}, additional_args = function() return {"--no-ignore", "--hidden"};  end} )<cr>]], opts)
 keymap("n", "<leader>=", "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", opts)
-keymap("n", "gm", [[<cmd>lua require'telescope.builtin'.marks(layout_config = {width = 0.99}})<cr>]], opts)
-keymap("n", "?", [[<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find({layout_config = {width = 0.99}})<cr>]], opts)
 
+-- go to marks
+keymap("n", "gm", [[<cmd>lua require'telescope.builtin'.marks(layout_config = {width = 0.99}})<cr>]], opts)
+
+-- fuzzy find in current buffer
+keymap("n", "?", [[<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find({layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "<leader><Space>", [[<cmd>b#<cr>]], opts)
+keymap("n", "<leader>bd", [[<cmd>b# | bd#<cr>]], opts)
