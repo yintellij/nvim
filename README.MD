@@ -9,6 +9,16 @@ My nvim configuration
 - nerdfont, brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font
 - lazygit, brew install lazygit
 
+## nvim-tree
+
+1. a -> create a new file, create directory if name end with /
+2. r -> rename a file
+3. y copy filename, Y copy relative path, gy copy absolute path
+4. d -> delete file/directory
+5. jk -> move cursor, h -> close folder, l -> open, 
+6. H -> toggle visibility of dotfiles
+7. W -> collapse whole tree
+8. ctrl + k -> show file info
 
 ## My customize
 

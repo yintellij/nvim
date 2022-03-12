@@ -6,6 +6,9 @@ end
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<C-\>]],
+    on_open = function ()
+        vim.cmd[[echo b:toggle_number]]
+    end,
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,
@@ -18,6 +21,8 @@ toggleterm.setup({
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
+        width = function() return vim.o.columns - 8 end,
+        height = 40,
 		winblend = 0,
 		highlights = {
 			border = "Normal",

@@ -83,18 +83,18 @@ keymap("n", "gt", [[<cmd>lua require'telescope.builtin'.lsp_type_definitions()<c
 keymap("n", "ga", [[<cmd>lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes').get_cursor())<cr>]], opts)
 
 -- implementations
-keymap("n", "gi", [[<cmd>lua require'telescope.builtin'.lsp_implementations(layout_config = {width = 0.99}})<cr>]], opts)
-keymap("n", "gs", [[<cmd>lua require'telescope.builtin'.lsp_document_symbols(layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gi", [[<cmd>lua require'telescope.builtin'.lsp_implementations({layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gs", [[<cmd>lua require'telescope.builtin'.lsp_document_symbols({layout_config = {width = 0.99}})<cr>]], opts)
 
 keymap("n", "gL", [[<cmd>lua require'telescope.builtin'.diagnostics({ bufnr = 0, layout_config = { width = 0.99 }})<cr>]], opts)
 
 
-keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep({ layout_config = { width = 0.99}})<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep({layout_config = {width = 0.99}})<cr>", opts)
 keymap("n", "<leader>F", [[<cmd>lua require'telescope.builtin'.live_grep({layout_config = {width = 0.99}, additional_args = function() return {"--no-ignore", "--hidden"};  end} )<cr>]], opts)
 keymap("n", "<leader>=", "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", opts)
 
 -- go to marks
-keymap("n", "gm", [[<cmd>lua require'telescope.builtin'.marks(layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gm", [[<cmd>lua require'telescope.builtin'.marks({layout_config = {width = 0.99}})<cr>]], opts)
 
 -- fuzzy find in current buffer
 keymap("n", "?", [[<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find({layout_config = {width = 0.99}})<cr>]], opts)
