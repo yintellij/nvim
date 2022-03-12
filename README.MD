@@ -30,4 +30,4 @@ My nvim configuration
 16. gB  -> list git branches
 17. gC  -> list current buffer commits
 18. gt  -> go to type definition
-
+19. ?   -> fuzzy finder on current buffer

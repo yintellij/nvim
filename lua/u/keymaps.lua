@@ -41,6 +41,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
+keymap("n", ">", ">>", opts)
+keymap("n", "<", "<<", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
@@ -69,20 +71,20 @@ keymap("n", "<leader>p", "<cmd>lua require'telescope.builtin'.find_files(require
 keymap("n", "<leader>P", [[<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, no_ignore = true, hidden = true}))<cr>]], opts)
 
 -- references
-keymap("n", "gr", [[<cmd>lua require'telescope.builtin'.lsp_references({includeDeclaration = false, path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gr", [[<cmd>lua require'telescope.builtin'.lsp_references({includeDeclaration = false, layout_config = {width = 0.99}})<cr>]], opts)
 keymap("n", "gB", [[<cmd>lua require'telescope.builtin'.git_branches({layout_config = {width = 0.99}})<cr>]], opts)
 keymap("n", "gC", [[<cmd>lua require'telescope.builtin'.git_bcommits({layout_config = {width = 0.99}})<cr>]], opts)
 
 -- go to definition
-keymap("n", "gd", [[<cmd>lua require'telescope.builtin'.lsp_definitions({ path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gd", [[<cmd>lua require'telescope.builtin'.lsp_definitions({layout_config = {width = 0.99}})<cr>]], opts)
 keymap("n", "gt", [[<cmd>lua require'telescope.builtin'.lsp_type_definitions()<cr>]], opts)
 
 -- code actions
 keymap("n", "ga", [[<cmd>lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes').get_cursor())<cr>]], opts)
 
 -- implementations
-keymap("n", "gi", [[<cmd>lua require'telescope.builtin'.lsp_implementations({ path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
-keymap("n", "gs", [[<cmd>lua require'telescope.builtin'.lsp_document_symbols({ path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gi", [[<cmd>lua require'telescope.builtin'.lsp_implementations(layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gs", [[<cmd>lua require'telescope.builtin'.lsp_document_symbols(layout_config = {width = 0.99}})<cr>]], opts)
 
 keymap("n", "gL", [[<cmd>lua require'telescope.builtin'.diagnostics({ bufnr = 0, layout_config = { width = 0.99 }})<cr>]], opts)
 
@@ -90,5 +92,6 @@ keymap("n", "gL", [[<cmd>lua require'telescope.builtin'.diagnostics({ bufnr = 0,
 keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep({ layout_config = { width = 0.99}})<cr>", opts)
 keymap("n", "<leader>F", [[<cmd>lua require'telescope.builtin'.live_grep({layout_config = {width = 0.99}, additional_args = function() return {"--no-ignore", "--hidden"};  end} )<cr>]], opts)
 keymap("n", "<leader>=", "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", opts)
-keymap("n", "gm", [[<cmd>lua require'telescope.builtin'.marks({path_display = {"relative"}, layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "gm", [[<cmd>lua require'telescope.builtin'.marks(layout_config = {width = 0.99}})<cr>]], opts)
+keymap("n", "?", [[<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find({layout_config = {width = 0.99}})<cr>]], opts)
 
