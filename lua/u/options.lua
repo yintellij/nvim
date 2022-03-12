@@ -50,3 +50,6 @@ end
 -- vim.cmd [[set iskeyword+=-]] -- daw asdf-asdf => 
 vim.cmd "set whichwrap+=<,>,[,],h,l" -- move to prev/next line when cursor at start/end of current line
 vim.cmd([[au BufRead,BufNewFile *.sol setfiletype solidity]])
+
+-- open help with vertical split
+vim.cmd('autocmd! FileType help wincmd L')

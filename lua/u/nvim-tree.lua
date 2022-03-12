@@ -45,13 +45,10 @@ nvim_tree.setup {
   auto_close = false,
   open_on_tab = true,
   hijack_cursor = false,
-  update_cwd = true,
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = true,
-  },
+  update_cwd = false,
   diagnostics = {
     enable = true,
+    show_on_dirs = true,
     icons = {
       hint = "",
       info = "",
@@ -60,8 +57,8 @@ nvim_tree.setup {
     },
   },
   update_focused_file = {
-    enable = true,
-    update_cwd = true,
+    enable = false,
+    update_cwd = false,
     ignore_list = {},
   },
   git = {
@@ -86,15 +83,21 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
   },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-  },
+  actions = {
+    change_dir = {
+        enable = false,
+    },
+
+  }
+  -- quit_on_open = 0,
+  -- git_hl = 1,
+  -- disable_window_picker = 0,
+  -- root_folder_modifier = ":t",
+  -- show_icons = {
+  --   git = 1,
+  --   folders = 1,
+  --   files = 1,
+  --   folder_arrows = 1,
+  --   tree_width = 30,
+  -- },
 }
